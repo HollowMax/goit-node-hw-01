@@ -16,7 +16,7 @@ function removeContact(contactId) {
   );
   console.log(newContacts);
 
-  return fs.writeFileSync(contactsPath, JSON.stringify(newContacts), 'utf-8');
+  return fs.writeFileSync(contactsPath, JSON.stringify(newContacts));
 }
 
 function addContact(name, email, phone) {
@@ -29,7 +29,7 @@ function addContact(name, email, phone) {
   };
   console.log(newContact);
   const contacts = [...oldContacts, newContact];
-  return fs.writeFileSync(contactsPath, JSON.stringify(contacts), 'utf-8');
+  return fs.writeFileSync(contactsPath, JSON.stringify(contacts));
 }
 
 module.exports = {
